@@ -138,7 +138,6 @@ p{
     display: grid;
     grid-template-columns: auto auto auto;
     grid-gap: 10px;
-    padding: 10px;
 
     .grid-item{
         position: relative;
@@ -252,6 +251,19 @@ p{
     }
 }
 
+//=======================================================================================
+//CSS propertie for animating the arrow when hoovered.
+#readmore-arrow{
+    transition: all 0.5s ease-out;
+    right: 10px;
+    width:120px;
+}
+
+.hovered{
+    right:0px;
+    width:100px;
+}
+
 @media only screen and (max-width: 600px){
     .grid-container{
         display: grid;
@@ -282,9 +294,34 @@ p{
 
 //======================================================================
 //CSS class & properties for the content container
+
 .content-container{
-    max-width: 1064px;
-    margin-left: auto;
-    margin-right: auto;
+max-width: 1064px;
+margin-left: auto;
+margin-right: auto;
+position: relative;
+}
+
+//Text in image, foodora
+
+.textInImage {
+position: absolute;
+top: 0px;
+h2 {
+position: absolute;
+top: 0px;
+color: $color-white;
+width: $weight-bold;
+Logotype: $logotype;
+margin-left: 20px; }
+}
+
+//Cropped image
+
+.cropped {
+width: 1064px; /* width of container */
+height: 140px; /* height of container */
+object-fit: cover; /* fit image in container */
 
 }
+
