@@ -20,6 +20,15 @@ h1{
     font-weight:$weight-bold;
     font-family: "Ceviche one";
     }
+h4{
+    font-size: $article-info;
+}
+h2{
+    font-size:$article-header;
+}
+p{
+    font-size:$article-body;
+}
 
 
 
@@ -54,8 +63,9 @@ h1{
     color: blue;
     }
 
-    //Code from Mikael
 
+
+    //Code from Mikael
     
 /* Search box styling */
 .search-container{box-sizing: border-box;
@@ -135,11 +145,17 @@ h1{
 
         //CSS class & properties for text inside the article to handle positioning
         .textInSmallArticle{
-            width: 100%;
+            height: 100%;
             position: absolute;
             bottom: 0px;
             margin-left: 180px;
             color: $color-blueblack;
+            h2{
+                margin-top: 0px;
+            }
+            p{
+
+            }
         }
 
         .textInArticle{
@@ -149,18 +165,42 @@ h1{
             background-color: $article-overlay;
 
             h2{
-                padding-left: 30px;
+                padding-left:30px;
+                margin:0px;
             }
             h4{
-                padding-left: 30px;
+                padding-left:30px;
+                margin-bottom: 2px;
             }
             p{
-                padding-left: 30px;
+                margin-top: 5px;
+                padding-left:30px;
             }
 
-            .rightside{
+            .rightside-readmore{
                 position: relative;
                 left:82%;
+                h4{
+                    padding-left: 0px;
+                    margin-bottom: 0px;
+                }
+                a{
+                    color: $color-white;
+                    text-decoration: none;
+                }
+
+            }
+            .rightside-readmore-small{
+                position:relative;
+                left:70%;
+                h4{
+                    padding-left:0px;
+                    margin-bottom: 0px;
+                }
+                a{
+                    color: $color-white;
+                    text-decoration: none;
+                }
             }
         }
     }
@@ -208,6 +248,34 @@ h1{
         img{
             width:170px;
             height:100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .grid-container{
+        display: grid;
+        grid-template-columns: auto;
+        width: 100%;
+        .grid-item{
+            position: relative;
+        }
+        .article1-mobile{
+            grid-column: 1;
+            grid-row:1;
+
+        }
+        .article2-mobile{
+            grid-column: 1;
+            grid-row:2;
+        }
+        .article3-mobile{
+            grid-column: 1;
+            grid-row:3;
+        }
+        .article4-mobile{
+            grid-column: 1;
+            grid-row:4;
         }
     }
 }

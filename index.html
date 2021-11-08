@@ -3,6 +3,7 @@
   <head>
     <link rel="stylesheet" href="mystyle.css">
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora&family=Oxygen:wght@300&display=swap" rel="stylesheet">
@@ -33,9 +34,9 @@
             <div class="topnav">
               <form action="/action_page.php">
               <div class="icon">
-              <input type="text" img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Search_Icon.svg" name="search" style="position: inherit;">
+              <input type="text" class="searchbarfield" img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Search_Icon.svg" name="search" style="position: inherit;">
               </div>
-              </form>
+              </form> 
             </div>
           </div>
         </div>
@@ -45,43 +46,45 @@
 
     <section class="content-container" style="padding-top:100px;">
       <div class="grid-container">
-        <article class="grid-item article1">
+        <article class="grid-item article1 article1-mobile">
           <img src="food4.jpg" alt="">
           <div class="textInArticle">
-            <h4>Published: .... </h4>
+            <h4>Publicerat: 10 Okt 2021 by Mikael </h4>
             <h2>Artikel 1</h2>
-            <p>Detta är en brödtext till artikeln</p>
-            <div class="rightside">
-              <h4>Read more</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum asperiores ea laboriosam! Debitis, recusandae inventore.</p>
+            <div class="rightside-readmore">
+              <a href="#"><h4>Read more</h4></a>
               <img src="arrow.svg" alt="Read more" style="width: 100px;">
-            </div>
           </div>
-        </article>
-
-        <article class="grid-item article2">
-          <img src="food3.jpg" alt="">
-          <div class="textInArticle">
-            <h4>Published: .... </h4>
-            <h2>Artikel 2</h2>
-            <p>Detta är en brödtext till artikeln</p>
-            <h4>Detta är en read more länk</h4>
-          <img src="#" alt="Read more">
         </div>
         </article>
 
-        <article class="grid-item article3">
+        <article class="grid-item article2 article2-mobile">
+          <img src="food3.jpg" alt="">
+          <div class="textInArticle">
+            <h4>Publicerat: 30 Sep 2021 by Annika</h4>
+            <h2>Artikel 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi facere velit odit amet necessitatibus eum!</p>
+            <div class="rightside-readmore-small">
+              <a href="#"><h4>Read more</h4></a>
+              <img src="arrow.svg" alt="Read more" style="width:100px;">
+            </div>
+        </div>
+        </article>
+
+        <article class="grid-item article3 article3-mobile">
           <img src="food2.jpg" alt="">
           <div class="textInSmallArticle">
             <h2>Artikel 3</h2>
-            <p>Detta är en brödtext till artikeln</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit perferendis ipsam quae eligendi hic accusamus.</p>
           </div>
         </article>
 
-        <article class="grid-item article4">
+        <article class="grid-item article4 article4-mobile">
           <img src="food5.jpg" alt="">
           <div class="textInSmallArticle">
             <h2>Artikel 4</h2>
-            <p>Detta är en brödtext till artikeln</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, maiores aspernatur! Et, voluptate. Obcaecati, quis!</p>
           </div>
         </article>
       </div>
