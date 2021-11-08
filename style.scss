@@ -1,0 +1,222 @@
+//=======================================================================
+// Vars for headings, p etc...
+
+$weight-regular: normal ;
+$weight-bold: bold ;
+$logotype: 24px;
+$article-header: 16px;
+$article-body: 13px;
+$article-info:10px;
+$color-white: #ffffff;
+$color-blueblack: #1E2D37;
+$article-overlay: rgb(0,0,0, 0.7);
+$font-lora: 'Lora', serif;
+$font-oxygen: 'Oxygen', sans-serif;
+
+
+h1{
+    color:$color-blueblack;
+    font-size: $logotype;
+    font-weight:$weight-bold;
+    font-family: "Ceviche one";
+    }
+
+
+
+    nav {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    right: 0px;
+    background: $color-white;
+    box-shadow: 0px 4px 4px rgb(0, 0, 0, 0.25);
+
+        ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        }
+
+        li {
+        display: inline-block;
+        }
+
+        a {
+        display: block;
+        padding: 6px 12px;
+        text-decoration: none;
+        color: $color-blueblack
+        }
+      }
+
+
+    a:hover{
+    color: blue;
+    }
+
+    //Code from Mikael
+
+    
+/* Search box styling */
+.search-container{box-sizing: border-box;
+    position: absolute;
+    width: 169px;
+    height: 29px;
+    left: 1083px;
+    top: 14px;
+    background: #FFFFFF;
+    border: 0.5px solid #1E2D37;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+  
+  
+  /* Search articles */
+  
+  .topnav input[type=text]
+  {position: absolute;
+  width: 120px;
+  height: 16px;
+  left: 1121px;
+  top: 20px;
+  
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  
+  color: #1E2D37;
+  font-size: $article-body;
+  font-weight: $weight-regular;
+  }
+  
+  /* Search Icon */
+  
+  
+  .search-container{position: absolute;
+  left: 76.25%;
+  right: 22.88%;
+  top: 2.13%;
+  bottom: 96.71%;
+  
+  background: #1E2D37;}
+  
+  /* Add responsiveness - On small screens, display the navbar vertically instead of horizontally */
+  @media screen and (max-width: 600px) {
+    .topnav .search-container {
+      float: none;
+    }
+    .topnav a, .topnav input[type=text], .topnav .search-container button {
+     float: none;
+     display: block;
+     text-align: left;
+     width: 100%;
+     margin: 0;
+     padding: 14px;
+   }
+   .topnav input[type=text] {
+    border: 1px solid #ccc;
+  }
+  }
+  
+
+
+//=======================================================================
+// CSS properties for the Grid container, grid item and single Item
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+
+    .grid-item{
+        position: relative;
+
+        //CSS class & properties for text inside the article to handle positioning
+        .textInSmallArticle{
+            width: 100%;
+            position: absolute;
+            bottom: 0px;
+            margin-left: 180px;
+            color: $color-blueblack;
+        }
+
+        .textInArticle{
+            width: 100%;
+            position: absolute;
+            bottom: 0px;
+            background-color: $article-overlay;
+
+            h2{
+                padding-left: 30px;
+            }
+            h4{
+                padding-left: 30px;
+            }
+            p{
+                padding-left: 30px;
+            }
+
+            .rightside{
+                position: relative;
+                left:82%;
+            }
+        }
+    }
+
+    .article1{
+        color: $color-white;
+        min-height: 550px;
+        min-width: 650px;
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 4;
+        img{
+            width:100%;
+            height:100%;
+        }
+
+    }
+    .article2{
+        color: $color-white;
+        min-height: 300px;
+        min-width:400px;
+        grid-column: 3;
+        grid-row: 1 / span 2;
+        img{
+            width:100%;
+            height:100%;
+        }
+    }
+    .article3{
+        color: $color-white;
+        min-height:140px;
+        min-width:180px;
+        grid-column:3;
+        grid-row: 3;
+        img{
+            width:170px;
+            height:100%;
+        }
+    }
+    .article4{
+        color: $color-white;
+        min-height:140px;
+        min-width:180px;
+        grid-column:3;
+        grid-row: 4;
+        img{
+            width:170px;
+            height:100%;
+        }
+    }
+}
+
+//======================================================================
+//CSS class & properties for the content container
+.content-container{
+    max-width: 1064px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
