@@ -1,3 +1,7 @@
+body {
+  margin: 0px;
+}
+
 h1 {
   color: #1E2D37;
   font-size: 24px;
@@ -32,12 +36,20 @@ nav ul {
 }
 nav li {
   display: inline-block;
+  padding: 20px;
 }
 nav a {
   display: block;
   padding: 6px 12px;
   text-decoration: none;
   color: #1E2D37;
+}
+nav .nav-item1 {
+  max-width: 240px;
+}
+nav .nav-item2 {
+  position: relative;
+  right: 160px;
 }
 
 a:hover {
@@ -250,19 +262,20 @@ a:hover {
   max-width: 1064px;
   margin-left: auto;
   margin-right: auto;
-  position: relative;
+}
+
+.foodora-ad {
+  width: 100%;
+  height: 100%;
 }
 
 .textInImage {
-  position: absolute;
-  top: 0px;
+  position: relative;
+  bottom: 150px;
 }
-.textInImage h2 {
-  position: absolute;
-  top: 0px;
+.textInImage h1 {
   color: #ffffff;
-  width: bold;
-  Logotype: 24px;
+  font-weight: bold;
   margin-left: 20px;
 }
 
@@ -273,6 +286,7 @@ a:hover {
   /* height of container */
   object-fit: cover;
   /* fit image in container */
+  background-color: #1E2D37;
 }
 
 /*# sourceMappingURL=mystyle.css.map */
