@@ -73,25 +73,56 @@ p{
         color: blue;
         }
 
+<<<<<<< Updated upstream
 
 
 
+=======
+>>>>>>> Stashed changes
 
     //Code from Mikael
 
 /* Search box styling */
-.search-container{box-sizing: border-box;
-    position: absolute;
-    width: 169px;
-    height: 29px;
-    left: 1083px;
-    top: 14px;
-    background: #FFFFFF;
-    border: 0.5px solid #1E2D37;
-    box-sizing: border-box;
+// .search-container{box-sizing: border-box;
+//     position: absolute;
+//     width: 169px;
+//     height: 29px;
+//     left: 1083px;
+//     top: 14px;
+//     background: #FFFFFF;
+//     border: 0.5px solid #1E2D37;
+//     box-sizing: border-box;
+//     border-radius: 10px;
+//   }
+
+
+  /* Search articles */
+
+  // .topnav input[type=text]
+  // {position: absolute;
+  // width: 120px;
+  // height: 16px;
+  // left: 1121px;
+  // top: 20px;
+  //
+  // font-family: Open Sans;
+  // font-style: normal;
+  // font-weight: normal;
+  // font-size: 13px;
+  // line-height: 18px;
+  //
+  // color: #1E2D37;
+  // font-size: $article-body;
+  // font-weight: $weight-regular;
+  // }
+
+  /* Search Icon */
+
+  input[type=search] {
     border-radius: 10px;
   }
 
+<<<<<<< Updated upstream
 
   /* Search articles */
 
@@ -123,6 +154,19 @@ p{
   bottom: 96.71%;
 
   background: #1E2D37;}
+=======
+  .search-container{
+    padding: 20px;
+    border-radius: 30px;
+  }
+  // .search-container{position: absolute;
+  // left: 76.25%;
+  // right: 22.88%;
+  // top: 2.13%;
+  // bottom: 96.71%;
+  //
+  // background: #1E2D37;}
+>>>>>>> Stashed changes
 
   /* Add responsiveness - On small screens, display the navbar vertically instead of horizontally */
   @media screen and (max-width: 600px) {
