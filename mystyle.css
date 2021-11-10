@@ -2,6 +2,10 @@ body {
   margin: 0px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h1 {
   color: #1E2D37;
   font-size: 24px;
@@ -223,15 +227,15 @@ a:hover {
   height: 100%;
 }
 
-#readmore-arrow {
-  transition: all 0.5s ease-out;
-  right: 10px;
-  width: 120px;
+.arrow-a:hover .readmore-arrow {
+  left: 10px;
+  position: relative;
 }
 
-.hovered {
-  right: 0px;
+.readmore-arrow {
+  left: 0px;
   width: 100px;
+  transition: left 0.7s;
 }
 
 @media only screen and (max-width: 600px) {
