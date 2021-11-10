@@ -61,44 +61,31 @@ a:hover {
 }
 
 /* Search box styling */
-.search-container {
-  box-sizing: border-box;
-  position: absolute;
-  width: 169px;
-  height: 29px;
-  left: 1083px;
-  top: 14px;
-  background: #FFFFFF;
-  border: 0.5px solid #1E2D37;
-  box-sizing: border-box;
+input[type=search] {
   border-radius: 10px;
+  padding: 5px;
 }
 
-/* Search articles */
-.topnav input[type=text] {
-  position: absolute;
-  width: 120px;
-  height: 16px;
-  left: 1121px;
-  top: 20px;
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 18px;
-  color: #1E2D37;
-  font-size: 13px;
-  font-weight: normal;
-}
-
-/* Search Icon */
 .search-container {
-  position: absolute;
-  left: 76.25%;
-  right: 22.88%;
-  top: 2.13%;
-  bottom: 96.71%;
-  background: #1E2D37;
+  padding: 20px;
+  max-height: 20px;
+}
+.search-container img {
+  position: relative;
+  bottom: 66px;
+  left: 5px;
+  width: 20px !important;
+}
+.search-container p {
+  position: relative;
+  bottom: 35px;
+  left: 30px;
+}
+.search-container .search-container:focus img {
+  display: none;
+}
+.search-container .search-container:focus p {
+  display: none;
 }
 
 /* Add responsiveness - On small screens, display the navbar vertically instead of horizontally */
