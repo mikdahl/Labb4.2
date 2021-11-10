@@ -16,6 +16,9 @@ $font-oxygen: 'Oxygen', sans-serif;
 body{
     margin:0px;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 h1{
     color:$color-blueblack;
@@ -307,16 +310,19 @@ p{
 
 //=======================================================================================
 //CSS propertie for animating the arrow when hoovered.
-#readmore-arrow{
-    transition: all 0.5s ease-out;
-    right: 10px;
-    width:120px;
+.arrow-a:hover{
+    .readmore-arrow{
+        left:10px;
+        position: relative;
+    }
+}
+.readmore-arrow{
+    left:0px;
+    width:100px;
+    transition: left .7s;
 }
 
-.hovered{
-    right:0px;
-    width:100px;
-}
+
 
 @media only screen and (max-width: 600px){
     .grid-container{
