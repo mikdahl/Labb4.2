@@ -1,8 +1,28 @@
+body {
+  margin: 0px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 h1 {
   color: #1E2D37;
   font-size: 24px;
   font-weight: bold;
   font-family: "Ceviche one";
+}
+
+h4 {
+  font-size: 10px;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+p {
+  font-size: 13px;
 }
 
 nav {
@@ -20,6 +40,7 @@ nav ul {
 }
 nav li {
   display: inline-block;
+  padding: 20px;
 }
 nav a {
   display: block;
@@ -27,50 +48,44 @@ nav a {
   text-decoration: none;
   color: #1E2D37;
 }
+nav .nav-item1 {
+  max-width: 240px;
+}
+nav .nav-item2 {
+  position: relative;
+  right: 160px;
+}
 
 a:hover {
   color: blue;
 }
 
 /* Search box styling */
-.search-container {
-  box-sizing: border-box;
-  position: absolute;
-  width: 169px;
-  height: 29px;
-  left: 1083px;
-  top: 14px;
-  background: #FFFFFF;
-  border: 0.5px solid #1E2D37;
-  box-sizing: border-box;
+input[type=search] {
   border-radius: 10px;
+  padding: 5px;
 }
 
-/* Search articles */
-.topnav input[type=text] {
-  position: absolute;
-  width: 120px;
-  height: 16px;
-  left: 1121px;
-  top: 20px;
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 18px;
-  color: #1E2D37;
-  font-size: 13px;
-  font-weight: normal;
-}
-
-/* Search Icon */
 .search-container {
-  position: absolute;
-  left: 76.25%;
-  right: 22.88%;
-  top: 2.13%;
-  bottom: 96.71%;
-  background: #1E2D37;
+  padding: 20px;
+  max-height: 20px;
+}
+.search-container img {
+  position: relative;
+  bottom: 66px;
+  left: 5px;
+  width: 20px !important;
+}
+.search-container p {
+  position: relative;
+  bottom: 35px;
+  left: 30px;
+}
+.search-container .search-container:focus img {
+  display: none;
+}
+.search-container .search-container:focus p {
+  display: none;
 }
 
 /* Add responsiveness - On small screens, display the navbar vertically instead of horizontally */
@@ -96,17 +111,19 @@ a:hover {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-gap: 10px;
-  padding: 10px;
 }
 .grid-container .grid-item {
   position: relative;
 }
 .grid-container .grid-item .textInSmallArticle {
-  width: 100%;
+  height: 100%;
   position: absolute;
   bottom: 0px;
   margin-left: 180px;
   color: #1E2D37;
+}
+.grid-container .grid-item .textInSmallArticle h2 {
+  margin-top: 0px;
 }
 .grid-container .grid-item .textInArticle {
   width: 100%;
@@ -116,16 +133,39 @@ a:hover {
 }
 .grid-container .grid-item .textInArticle h2 {
   padding-left: 30px;
+  margin: 0px;
 }
 .grid-container .grid-item .textInArticle h4 {
   padding-left: 30px;
+  margin-bottom: 2px;
 }
 .grid-container .grid-item .textInArticle p {
+  margin-top: 5px;
   padding-left: 30px;
 }
-.grid-container .grid-item .textInArticle .rightside {
+.grid-container .grid-item .textInArticle .rightside-readmore {
   position: relative;
   left: 82%;
+}
+.grid-container .grid-item .textInArticle .rightside-readmore h4 {
+  padding-left: 0px;
+  margin-bottom: 0px;
+}
+.grid-container .grid-item .textInArticle .rightside-readmore a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.grid-container .grid-item .textInArticle .rightside-readmore-small {
+  position: relative;
+  left: 70%;
+}
+.grid-container .grid-item .textInArticle .rightside-readmore-small h4 {
+  padding-left: 0px;
+  margin-bottom: 0px;
+}
+.grid-container .grid-item .textInArticle .rightside-readmore-small a {
+  color: #ffffff;
+  text-decoration: none;
 }
 .grid-container .article1 {
   color: #ffffff;
@@ -137,6 +177,8 @@ a:hover {
 .grid-container .article1 img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  /* fit image in container */
 }
 .grid-container .article2 {
   color: #ffffff;
@@ -172,10 +214,72 @@ a:hover {
   height: 100%;
 }
 
+.arrow-a:hover .readmore-arrow {
+  left: 10px;
+  position: relative;
+}
+
+.readmore-arrow {
+  left: 0px;
+  width: 100px;
+  transition: left 0.7s;
+}
+
+@media only screen and (max-width: 600px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    width: 100%;
+  }
+  .grid-container .grid-item {
+    position: relative;
+  }
+  .grid-container .article1-mobile {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .grid-container .article2-mobile {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .grid-container .article3-mobile {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .grid-container .article4-mobile {
+    grid-column: 1;
+    grid-row: 4;
+  }
+}
 .content-container {
   max-width: 1064px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.foodora-ad {
+  width: 100%;
+  height: 100%;
+}
+
+.textInImage {
+  position: relative;
+  bottom: 150px;
+}
+.textInImage h1 {
+  color: #ffffff;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.cropped {
+  width: 1064px;
+  /* width of container */
+  height: 140px;
+  /* height of container */
+  object-fit: cover;
+  /* fit image in container */
+  background-color: #1E2D37;
 }
 
 /*# sourceMappingURL=mystyle.css.map */
