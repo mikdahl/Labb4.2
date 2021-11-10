@@ -186,6 +186,8 @@ a:hover {
 .grid-container .article1 img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  /* fit image in container */
 }
 .grid-container .article2 {
   color: #ffffff;
