@@ -83,7 +83,7 @@ p{
         }
 
 
-        
+
 
     /* Search box styling */
     input[type=search]{
@@ -118,9 +118,9 @@ p{
         .hamburger{
             display: none;
         }
-    
 
-<<<<<<< Updated upstream
+
+
 
     //=======================================================================
     // CSS properties for the Grid container, grid item and single Item
@@ -300,11 +300,11 @@ p{
 
  /* Add responsiveness - On small screens, display the navbar vertically instead of horizontally */
 @media only screen and (max-width: 375px){
-    
+
     img{
         width: 100%;
     }
-   
+
     .search-container {
       float: none;
     }
@@ -327,9 +327,9 @@ p{
     .nav-item3{
         display: none;
     }
-    
-    
-    
+
+
+
     .grid-container{
         display: grid;
         grid-template-columns: auto;

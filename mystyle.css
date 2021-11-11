@@ -1,9 +1,6 @@
-/* Error: expected selector.
- *    ,
- * 79 | <<<<<<< Updated upstream
- *    | ^
- *    '
- *   style.scss 79:1  root stylesheet */
+body {
+  margin: 0px;
+}
 
 html {
   scroll-behavior: smooth;
@@ -64,200 +61,226 @@ p {
   nav .nav-item3 {
     right: 130px;
   }
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: expected selector.\a    \2577 \a 79 \2502  <<<<<<< Updated upstream\d\a    \2502  ^\a    \2575 \a   style.scss 79:1  root stylesheet";
-}
 
-a:hover {
-  color: blue;
-}
-
-/* Search box styling */
-.search-container {
-  box-sizing: border-box;
-  position: absolute;
-  width: 169px;
-  height: 29px;
-  left: 1083px;
-  top: 14px;
-  background: #FFFFFF;
-  border: 0.5px solid #1E2D37;
-  box-sizing: border-box;
-  border-radius: 10px;
-}
-
-/* Search articles */
-.topnav input[type=text] {
-  position: absolute;
-  width: 120px;
-  height: 16px;
-  left: 1121px;
-  top: 20px;
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 18px;
-  color: #1E2D37;
-  font-size: 13px;
-  font-weight: normal;
-}
-
-/* Search Icon */
-.search-container {
-  position: absolute;
-  left: 76.25%;
-  right: 22.88%;
-  top: 2.13%;
-  bottom: 96.71%;
-  background: #1E2D37;
-}
-
-/* Add responsiveness - On small screens, display the navbar vertically instead of horizontally */
-@media screen and (max-width: 600px) {
-  .topnav .search-container {
-    float: none;
+  a:hover {
+    color: blue;
   }
 
-  .topnav a, .topnav input[type=text], .topnav .search-container button {
-    float: none;
-    display: block;
-    text-align: left;
+  /* Search box styling */
+  input[type=search] {
+    border-radius: 10px;
+    padding: 5px;
+  }
+
+  .search-container {
+    padding: 20px;
+    max-height: 20px;
+  }
+  .search-container img {
+    position: relative;
+    bottom: 66px;
+    left: 5px;
+    width: 20px !important;
+  }
+  .search-container p {
+    position: relative;
+    bottom: 35px;
+    left: 30px;
+  }
+  .search-container .search-container:focus img {
+    display: none;
+  }
+  .search-container .search-container:focus p {
+    display: none;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+  }
+  .grid-container .grid-item {
+    position: relative;
+  }
+  .grid-container .grid-item .textInSmallArticle {
+    height: 100%;
+    position: absolute;
+    bottom: 0px;
+    margin-left: 180px;
+    color: #1E2D37;
+  }
+  .grid-container .grid-item .textInSmallArticle h2 {
+    margin-top: 0px;
+  }
+  .grid-container .grid-item .textInArticle {
     width: 100%;
-    margin: 0;
-    padding: 14px;
+    position: absolute;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .grid-container .grid-item .textInArticle h2 {
+    padding-left: 30px;
+    margin: 0px;
+  }
+  .grid-container .grid-item .textInArticle h4 {
+    padding-left: 30px;
+    margin-bottom: 2px;
+  }
+  .grid-container .grid-item .textInArticle p {
+    margin-top: 5px;
+    padding-left: 30px;
+  }
+  .grid-container .grid-item .textInArticle .rightside-readmore {
+    position: relative;
+    left: 82%;
+  }
+  .grid-container .grid-item .textInArticle .rightside-readmore h4 {
+    padding-left: 0px;
+    margin-bottom: 0px;
+  }
+  .grid-container .grid-item .textInArticle .rightside-readmore a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .grid-container .grid-item .textInArticle .rightside-readmore-small {
+    position: relative;
+    left: 70%;
+  }
+  .grid-container .grid-item .textInArticle .rightside-readmore-small h4 {
+    padding-left: 0px;
+    margin-bottom: 0px;
+  }
+  .grid-container .grid-item .textInArticle .rightside-readmore-small a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .grid-container .article1 {
+    color: #ffffff;
+    min-height: 550px;
+    min-width: 650px;
+    grid-column: 1/span 2;
+    grid-row: 1/span 4;
+  }
+  .grid-container .article1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* fit image in container */
+  }
+  .grid-container .article2 {
+    color: #ffffff;
+    min-height: 300px;
+    min-width: 400px;
+    grid-column: 3;
+    grid-row: 1/span 2;
+  }
+  .grid-container .article2 img {
+    width: 100%;
+    height: 100%;
+  }
+  .grid-container .article3 {
+    color: #ffffff;
+    min-height: 140px;
+    min-width: 180px;
+    grid-column: 3;
+    grid-row: 3;
+  }
+  .grid-container .article3 img {
+    width: 170px;
+    height: 100%;
+  }
+  .grid-container .article4 {
+    color: #ffffff;
+    min-height: 140px;
+    min-width: 180px;
+    grid-column: 3;
+    grid-row: 4;
+  }
+  .grid-container .article4 img {
+    width: 170px;
+    height: 100%;
   }
 
-  .topnav input[type=text] {
-    border: 1px solid #ccc;
+  .arrow-a:hover .readmore-arrow {
+    left: 10px;
+    position: relative;
+  }
+
+  .readmore-arrow {
+    left: 0px;
+    width: 100px;
+    transition: left 0.7s;
+  }
+
+  .content-container {
+    max-width: 1064px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 100px;
+  }
+
+  .foodora-ad {
+    width: 100%;
+    max-height: 140px;
+    background-color: black;
+  }
+
+  .textInImage {
+    position: relative;
+    bottom: 150px;
+  }
+  .textInImage h1 {
+    color: #ffffff;
+    font-weight: bold;
+    margin-left: 20px;
+  }
+
+  .cropped {
+    width: 1064px;
+    /* width of container */
+    height: 140px;
+    /* height of container */
+    object-fit: cover;
+    /* fit image in container */
+    background-color: #1E2D37;
   }
 }
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-gap: 10px;
-}
-.grid-container .grid-item {
-  position: relative;
-}
-.grid-container .grid-item .textInSmallArticle {
-  height: 100%;
-  position: absolute;
-  bottom: 0px;
-  margin-left: 180px;
-  color: #1E2D37;
-}
-.grid-container .grid-item .textInSmallArticle h2 {
-  margin-top: 0px;
-}
-.grid-container .grid-item .textInArticle {
-  width: 100%;
-  position: absolute;
-  bottom: 0px;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-.grid-container .grid-item .textInArticle h2 {
-  padding-left: 30px;
-  margin: 0px;
-}
-.grid-container .grid-item .textInArticle h4 {
-  padding-left: 30px;
-  margin-bottom: 2px;
-}
-.grid-container .grid-item .textInArticle p {
-  margin-top: 5px;
-  padding-left: 30px;
-}
-.grid-container .grid-item .textInArticle .rightside-readmore {
-  position: relative;
-  left: 82%;
-}
-.grid-container .grid-item .textInArticle .rightside-readmore h4 {
-  padding-left: 0px;
-  margin-bottom: 0px;
-}
-.grid-container .grid-item .textInArticle .rightside-readmore a {
-  color: #ffffff;
-  text-decoration: none;
-}
-.grid-container .grid-item .textInArticle .rightside-readmore-small {
-  position: relative;
-  left: 70%;
-}
-.grid-container .grid-item .textInArticle .rightside-readmore-small h4 {
-  padding-left: 0px;
-  margin-bottom: 0px;
-}
-.grid-container .grid-item .textInArticle .rightside-readmore-small a {
-  color: #ffffff;
-  text-decoration: none;
-}
-.grid-container .article1 {
-  color: #ffffff;
-  min-height: 550px;
-  min-width: 650px;
-  grid-column: 1/span 2;
-  grid-row: 1/span 4;
-}
-.grid-container .article1 img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /* fit image in container */
-}
-.grid-container .article2 {
-  color: #ffffff;
-  min-height: 300px;
-  min-width: 400px;
-  grid-column: 3;
-  grid-row: 1/span 2;
-}
-.grid-container .article2 img {
-  width: 100%;
-  height: 100%;
-}
-.grid-container .article3 {
-  color: #ffffff;
-  min-height: 140px;
-  min-width: 180px;
-  grid-column: 3;
-  grid-row: 3;
-}
-.grid-container .article3 img {
-  width: 170px;
-  height: 100%;
-}
-.grid-container .article4 {
-  color: #ffffff;
-  min-height: 140px;
-  min-width: 180px;
-  grid-column: 3;
-  grid-row: 4;
-}
-.grid-container .article4 img {
-  width: 170px;
-  height: 100%;
-}
+/* Add responsiveness - On small screens, display the navbar vertically instead of horizontally */
+@media only screen and (max-width: 375px) {
+  img {
+    width: 100%;
+  }
 
-.arrow-a:hover .readmore-arrow {
-  left: 10px;
-  position: relative;
-}
+  .search-container {
+    float: none;
+  }
 
-.readmore-arrow {
-  left: 0px;
-  width: 100px;
-  transition: left 0.7s;
-}
+  .nav-item1 {
+    padding-left: 0px !important;
+    max-height: 80px;
+  }
+  .nav-item1 .hamburger {
+    width: 50px;
+    position: relative;
+    left: 280px;
+    bottom: 30px;
+  }
+  .nav-item1 .hamburger img {
+    max-width: 50px;
+  }
 
-@media only screen and (max-width: 600px) {
+  .nav-item2 {
+    display: none;
+  }
+
+  .nav-item3 {
+    display: none;
+  }
+
   .grid-container {
     display: grid;
     grid-template-columns: auto;
@@ -265,6 +288,7 @@ a:hover {
   }
   .grid-container .grid-item {
     position: relative;
+    width: 100%;
   }
   .grid-container .article1-mobile {
     grid-column: 1;
@@ -282,36 +306,13 @@ a:hover {
     grid-column: 1;
     grid-row: 4;
   }
-}
-.content-container {
-  max-width: 1064px;
-  margin-left: auto;
-  margin-right: auto;
-}
 
-.foodora-ad {
-  width: 100%;
-  height: 100%;
-}
-
-.textInImage {
-  position: relative;
-  bottom: 150px;
-}
-.textInImage h1 {
-  color: #ffffff;
-  font-weight: bold;
-  margin-left: 20px;
-}
-
-.cropped {
-  width: 1064px;
-  /* width of container */
-  height: 140px;
-  /* height of container */
-  object-fit: cover;
-  /* fit image in container */
-  background-color: #1E2D37;
+  .content-container {
+    padding-top: 10px;
+  }
+  .content-container .cropped {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=mystyle.css.map */
