@@ -270,11 +270,12 @@ p{
         transition: left .7s;
     }
 
- /* Line divider styling */
+ /* Line divider styling ???????????? Kolla med resten av gruppen!!!!*/
  hr {
   width: 70%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 10%;
+  margin-right: 10%;
+  position: absolute;
  }
 
     //======================================================================
