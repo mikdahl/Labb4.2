@@ -19,7 +19,7 @@ body{
 html{
     scroll-behavior: smooth;
 }
-
+/* Logotype */
 h1{
     letter-spacing: 3px;
     color:$color-blueblack;
@@ -27,12 +27,15 @@ h1{
     font-weight:$weight-bold;
     font-family: $font-ubuntu;
     }
+/* Article information like date and time */
 h4{
     font-size: $article-info;
 }
+/* Header for aticles */
 h2{
     font-size:$article-header;
 }
+/* Foodora text styling */
 h6{
     letter-spacing: 3px;
     color:$color-white;
@@ -41,6 +44,7 @@ h6{
     font-family: $font-ubuntu;
     margin: 1%;
 }
+/* Text in artickle */
 p{
     font-size:$article-body;
 }
@@ -73,19 +77,22 @@ p{
             text-decoration: none;
             color: $color-blueblack
             }
+            /* Logotype */
             .nav-item1{
                 max-width: 240px;
-                padding-left:175px;
+                padding-left:10%;
             }
+            /* Menu */
             .nav-item2{
                 position:relative;
-                right:190px;
+                right:19%;
             }
+            /* Search bar */
             .nav-item3{
-                right:130px;
+                right:1%;
             }
         }
-
+        /* Menu hover */
         a:hover{
             color: blue;
         }
