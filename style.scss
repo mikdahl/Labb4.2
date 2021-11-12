@@ -33,6 +33,13 @@ h4{
 h2{
     font-size:$article-header;
 }
+h6{
+    letter-spacing: 3px;
+    color:$color-white;
+    font-size: $logotype;
+    font-weight:$weight-bold;
+    font-family: $font-ubuntu;
+}
 p{
     font-size:$article-body;
 }
