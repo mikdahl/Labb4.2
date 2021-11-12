@@ -234,6 +234,18 @@ p {
     transition: left 0.7s;
   }
 
+  hr {
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 1%;
+    margin-block-end: 1%;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    width: 75%;
+  }
+
   .content-container {
     max-width: 1064px;
     margin-left: auto;
@@ -251,7 +263,7 @@ p {
     position: relative;
     bottom: 150px;
   }
-  .textInImage h1 {
+  .textInImage h6 {
     color: #ffffff;
     font-weight: bold;
     margin-left: 20px;
