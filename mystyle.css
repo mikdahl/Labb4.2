@@ -40,7 +40,7 @@ p {
   font-size: 13px;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 800px) {
   nav {
     position: absolute;
     width: 100%;
@@ -70,13 +70,15 @@ p {
   nav .nav-item1 {
     max-width: 240px;
     padding-left: 10%;
+    position: relative;
   }
   nav .nav-item2 {
     position: relative;
-    right: 19%;
+    margin-right: 19%;
   }
   nav .nav-item3 {
-    right: 1%;
+    margin-right: 1%;
+    position: relative;
   }
 
   /* Menu hover */
@@ -234,16 +236,10 @@ p {
     transition: left 0.7s;
   }
 
+  /* Line divider styling ???????????? Kolla med resten av gruppen!!!!*/
   hr {
-    display: block;
-    unicode-bidi: isolate;
-    margin-block-start: 1%;
-    margin-block-end: 1%;
-    margin-inline-start: auto;
-    margin-inline-end: auto;
-    overflow: hidden;
-    border-style: inset;
-    width: 71.5%;
+    width: 100%;
+    position: inherit;
   }
 
   .content-container {

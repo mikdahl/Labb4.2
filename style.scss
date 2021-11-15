@@ -50,7 +50,7 @@ p{
 }
 
 
-@media screen and (min-width: 400px){
+@media screen and (min-width: 800px){
 
         nav {
         position: absolute;
@@ -81,15 +81,17 @@ p{
             .nav-item1{
                 max-width: 240px;
                 padding-left:10%;
+                position:relative;
             }
             /* Menu */
             .nav-item2{
                 position:relative;
-                right:19%;
+                margin-right:19%;
             }
             /* Search bar */
             .nav-item3{
-                right:1%;
+                margin-right:1%;
+                position:relative;
             }
         }
         /* Menu hover */
@@ -272,10 +274,8 @@ p{
 
  /* Line divider styling ???????????? Kolla med resten av gruppen!!!!*/
  hr {
-  width: 70%;
-  margin-left: 10%;
-  margin-right: 10%;
-  position: absolute;
+  width: 100%;
+  position:inherit;
  }
 
     //======================================================================
