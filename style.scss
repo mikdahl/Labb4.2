@@ -21,6 +21,7 @@ html{
 }
 /* Logotype */
 h1{
+    padding-left:15px;
     letter-spacing: 3px;
     color:$color-blueblack;
     font-size: $logotype;
@@ -50,7 +51,11 @@ p{
 }
 
 
-@media screen and (min-width: 800px){
+@media screen and (min-width: 380px){
+
+    #nav-expanded{
+        display: none;
+    }
 
         nav {
         position: absolute;
@@ -86,7 +91,7 @@ p{
             /* Menu */
             .nav-item2{
                 position:relative;
-                right: 7.5%;
+                right: 9%;
             }
             /* Search bar */
             .nav-item3{
@@ -330,17 +335,24 @@ p{
       float: none;
     }
     .nav-item1{ //Nav item1 on mobile. 
+        max-height:57px;
         padding-left: 0px !important;
-        //max-height:80px;
-        .hamburger{ // CSS-class for the hamburger menu
-            width: 50px;
-            position: relative;
-            left:280px;
-            bottom: 30px;
-            img{ // Setting the max witdh for the hamrburger image
-                max-width: 50px;
-            }
+        box-shadow: 0px 4px 4px rgb(0, 0, 0, 0.25);
+    }
+
+    .hamburger{ // CSS-class for the hamburger menu
+        width: 24px;
+        position: relative;
+        left:90%;
+        bottom: 50px;
+        img{ // Setting the max witdh for the hamrburger image
+            max-width: 50px;
         }
+    }
+
+    .nav-item1-nonshadow{
+        max-height:60px;
+        padding-left: 0px !important;
     }
     .nav-item2{ //nav item 2 is hidden on mobile
         display: none;
@@ -352,11 +364,27 @@ p{
 
     #mobileNav{
         display: none;
-        ul{//Styling comes here
-            
-            li{ // Styling comes here
+        
+    }
+    .nav-expanded{
+        position: relative;
+    }
 
-            }
+    ul{//Styling comes here
+        list-style-type: none;
+        margin:0px;
+        padding:0px;
+        overflow: hidden;
+        li{ // Styling comes here
+            
+        }
+        li a{
+            padding-left:20px;
+            padding-bottom: 5px;
+            text-decoration: none;
+            display: block;
+            color: black;
+            font-size: 20px;
         }
     }
 
@@ -371,6 +399,7 @@ p{
         .article1-mobile{
             grid-column: 1;
             grid-row:1;
+            padding-top:10px;
 
         }
         .article2-mobile{

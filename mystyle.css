@@ -8,6 +8,7 @@ html {
 
 /* Logotype */
 h1 {
+  padding-left: 15px;
   letter-spacing: 3px;
   color: #1E2D37;
   font-size: 24px;
@@ -40,7 +41,11 @@ p {
   font-size: 13px;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 380px) {
+  #nav-expanded {
+    display: none;
+  }
+
   nav {
     position: absolute;
     width: 100%;
@@ -74,7 +79,7 @@ p {
   }
   nav .nav-item2 {
     position: relative;
-    right: 7.5%;
+    right: 9%;
   }
   nav .nav-item3 {
     right: 14%;
@@ -286,16 +291,24 @@ p {
   }
 
   .nav-item1 {
+    max-height: 57px;
     padding-left: 0px !important;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
-  .nav-item1 .hamburger {
-    width: 50px;
+
+  .hamburger {
+    width: 24px;
     position: relative;
-    left: 280px;
-    bottom: 30px;
+    left: 90%;
+    bottom: 50px;
   }
-  .nav-item1 .hamburger img {
+  .hamburger img {
     max-width: 50px;
+  }
+
+  .nav-item1-nonshadow {
+    max-height: 60px;
+    padding-left: 0px !important;
   }
 
   .nav-item2 {
@@ -309,6 +322,26 @@ p {
   #mobileNav {
     display: none;
   }
+
+  .nav-expanded {
+    position: relative;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+  }
+  ul li a {
+    padding-left: 20px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    display: block;
+    color: black;
+    font-size: 20px;
+  }
+
   .grid-container {
     display: grid;
     grid-template-columns: auto;
@@ -321,6 +354,7 @@ p {
   .grid-container .article1-mobile {
     grid-column: 1;
     grid-row: 1;
+    padding-top: 10px;
   }
   .grid-container .article2-mobile {
     grid-column: 1;
