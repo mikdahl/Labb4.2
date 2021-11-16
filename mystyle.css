@@ -287,7 +287,6 @@ p {
 
   .nav-item1 {
     padding-left: 0px !important;
-    max-height: 80px;
   }
   .nav-item1 .hamburger {
     width: 50px;
@@ -307,6 +306,9 @@ p {
     display: none;
   }
 
+  #mobileNav {
+    display: none;
+  }
   .grid-container {
     display: grid;
     grid-template-columns: auto;
