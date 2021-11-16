@@ -79,7 +79,7 @@ p {
   }
   nav .nav-item2 {
     position: relative;
-    right: 9%;
+    right: 12%;
   }
   nav .nav-item3 {
     right: 14%;
@@ -93,19 +93,42 @@ p {
 
   /* Search box styling */
   input[type=search] {
-    border-radius: 10px;
-    padding: 5px;
+    border-radius: none;
+    border: none;
+    background: none;
+    max-width: 120px;
+    position: relative;
+    left: 40px;
+    bottom: 18px;
+  }
+
+  .input-icons {
+    width: 100%;
+  }
+
+  .icon {
+    padding: 10px;
+    color: black;
+    min-width: 50px;
+    text-align: center;
   }
 
   .search-container {
-    padding: 20px;
-    max-height: 20px;
+    position: relative;
+    background-color: white;
+    border-radius: 15px;
+    border: #1E2D37 0.5px solid;
+    padding: 5px;
+    right: 11%;
+    max-width: 169px;
+    max-height: 29px;
+    top: 16px;
   }
   .search-container img {
     position: relative;
-    bottom: 66px;
-    left: 5px;
     width: 20px !important;
+    top: 6px;
+    left: 10px;
   }
   .search-container p {
     position: relative;
