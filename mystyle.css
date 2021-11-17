@@ -4,6 +4,7 @@ body {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* Logotype */
@@ -305,12 +306,16 @@ p {
 }
 /* Add responsiveness - On small screens, display the navbar vertically instead of horizontally */
 @media only screen and (max-width: 375px) {
+  body {
+    overflow-x: hidden;
+  }
+
   img {
     width: 100%;
   }
 
   .search-container {
-    float: none;
+    display: none;
   }
 
   .nav-item1 {
@@ -375,6 +380,58 @@ p {
     position: relative;
     width: 100%;
   }
+  .grid-container .grid-item .textInArticle {
+    width: 100%;
+    position: absolute;
+    bottom: 4px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .grid-container .grid-item .textInArticle h2 {
+    margin: 0px;
+    padding-left: 15px;
+  }
+  .grid-container .grid-item .textInArticle h4 {
+    margin-bottom: 0px;
+    padding-left: 15px;
+  }
+  .grid-container .grid-item .textInArticle p {
+    display: none;
+  }
+  .grid-container .grid-item .textInArticle .rightside-readmore {
+    position: relative;
+    left: 66%;
+  }
+  .grid-container .grid-item .textInArticle .rightside-readmore h4 {
+    padding-left: 0px;
+    margin-bottom: 0px;
+  }
+  .grid-container .grid-item .textInArticle .rightside-readmore a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .grid-container .grid-item .textInArticle .rightside-readmore-small {
+    position: relative;
+    left: 66%;
+  }
+  .grid-container .grid-item .textInArticle .rightside-readmore-small h4 {
+    padding-left: 0px;
+    margin-bottom: 0px;
+  }
+  .grid-container .grid-item .textInArticle .rightside-readmore-small a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .grid-container .grid-item .textInSmallArticle {
+    height: 100%;
+    position: absolute;
+    bottom: 0px;
+    margin-left: 160px;
+    color: #1E2D37;
+  }
+  .grid-container .grid-item .textInSmallArticle h2 {
+    margin-top: 0px;
+  }
   .grid-container .article1-mobile {
     grid-column: 1;
     grid-row: 1;
@@ -387,14 +444,33 @@ p {
   .grid-container .article3-mobile {
     grid-column: 1;
     grid-row: 3;
+    max-height: 140px;
+  }
+  .grid-container .article3-mobile img {
+    width: 40%;
   }
   .grid-container .article4-mobile {
     grid-column: 1;
     grid-row: 4;
+    min-height: 140px;
+  }
+  .grid-container .article4-mobile img {
+    width: 40%;
+    height: 136px;
+  }
+  .textInImage {
+    position: relative;
+    bottom: 235px;
+  }
+  .textInImage h6 {
+    color: #ffffff;
+    font-weight: bold;
+    margin-left: 20px;
   }
 
   .content-container {
     padding-top: 10px;
+    padding: 10px;
   }
   .content-container .cropped {
     width: 100%;
