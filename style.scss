@@ -18,6 +18,7 @@ body{
 }
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 /* Logotype */
 h1{
@@ -351,12 +352,16 @@ p{
  /* Add responsiveness - On small screens, display the navbar vertically instead of horizontally */
 @media only screen and (max-width: 375px){
 
+    body{
+        overflow-x: hidden;
+    }
+
     img{
         width: 100%;
     }
 
     .search-container {
-      float: none;
+      display: none;
     }
     .nav-item1{ //Nav item1 on mobile. 
         max-height:57px;
@@ -421,10 +426,59 @@ p{
             position: relative;
             width: 100%;
             .textInArticle{
+                width: 100%;
+                position: absolute;
+                bottom: 4px;
+                color: $color-white;
+                background-color: $article-overlay;
+                h2{
+                    margin: 0px;
+                    padding-left:15px;
+                }
+                h4{
+                    margin-bottom: 0px;
+                    padding-left:15px;
+                }
+                p{
+                    display: none;
+                }
+
+                .rightside-readmore{
+                    position: relative;
+                    left:66%;
+                    h4{
+                        padding-left: 0px;
+                        margin-bottom: 0px;
+                    }
+                    a{
+                        color: $color-white;
+                        text-decoration: none;
+                    }
+
+                }
+                .rightside-readmore-small{
+                    position:relative;
+                    left:66%;
+                    h4{
+                        padding-left:0px;
+                        margin-bottom: 0px;
+                    }
+                    a{
+                        color: $color-white;
+                        text-decoration: none;
+                    }
+                }
 
             }
             .textInSmallArticle{
-                
+                height: 100%;
+                position: absolute;
+                bottom: 0px;
+                margin-left: 160px;
+                color: $color-blueblack;
+                h2{
+                    margin-top: 0px;
+                }
             }
         }
         
@@ -433,6 +487,7 @@ p{
             grid-row:1;
             padding-top:10px;
 
+           
         }
         .article2-mobile{
             grid-column: 1;
@@ -441,14 +496,42 @@ p{
         .article3-mobile{
             grid-column: 1;
             grid-row:3;
+            max-height:140px;
+            img{
+                width:40%;
+            }
+            p{
+                
+            }
         }
         .article4-mobile{
             grid-column: 1;
             grid-row:4;
+            min-height:140px;
+            img{
+                width:40%;
+                height:136px;
+            }
+            p{
+                
+            }
+        }
+    }
+
+    //Text in image, foodora
+    .textInImage {
+        position: relative;
+        bottom: 235px;
+
+        h6 {
+            color: $color-white;
+            font-weight: $weight-bold;
+            margin-left: 20px;
         }
     }
     .content-container{
         padding-top: 10px;
+        padding:10px;
         .cropped{
             width:100%;
         }
