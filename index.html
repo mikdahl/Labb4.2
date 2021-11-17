@@ -9,7 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora&family=Oxygen:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ceviche+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
-    <title></title>
+
+    <title>Kungliga Grupp 3's arbete</title>
   </head>
   <body>
 
@@ -17,10 +18,15 @@
       <div class="grid-container">
         <div class="grid-item nav-item1">
           <h1>Logotype</h1>
-          <div class="hamburger">
-            <img src="nav.png">
+          <div class="hamburger" onclick="displayLinks()">
+            <img src="nav.png" id="nav-icon">
           </div>
         </div>
+
+        <section id="nav-expanded">
+          <ul id="mobileNav">
+          </ul>
+        </section>
 
 
         <div class="grid-item nav-item2">
@@ -30,14 +36,15 @@
             <li><a href="#">Press</a></li>
             <li><a href="#">Careers</a></li>
             <li><a href="#">Contact</a></li>
-          </ul>
+          </ul>          
         </div>
 
         <div class="grid-item nav-item3">
-          <form class="search-container" action="/action_page.php">
-           <input type="search" id="gsearch" name="gsearch" >
-           <p>Search articles</p>
-           <img src="https://cdn.iconscout.com/icon/free/png-256/search-2287049-1907871.png" style="width:40px;">
+          <form class="search-container">
+            <div class="input-icons">
+              <img src="https://cdn.iconscout.com/icon/free/png-256/search-2287049-1907871.png" style="width:40px;"> 
+          </div>
+            <input type="search" id="gsearch" name="gsearch" placeholder="Search articles">
           </form>
       </div>
     </nav>
@@ -76,7 +83,7 @@
           <img src="vulkan1.jpg" alt="Bild på en vulkan.">
           <div class="textInSmallArticle">
             <h2>Svenska forskarnas unika bilder på vulkanutbrottet: “Som en apokalyps”.</h2>
-            <p>Från världens renaste luft till väldigt, väldigt smutsig. Forskarnas solteleskop övertäcks med aska var och varannan dag sedan vulkanutbrottet på La Palma.</p>
+            <p>Från världens renaste luft till väldigt, väldigt smutsig. Forskarnas solteleskop övertäcks med aska var och varannan dag ...</p>
           </div>
         </article>
 
@@ -84,7 +91,7 @@
           <img src="bakterier.jpg" alt="Bild på bakterier.">
           <div class="textInSmallArticle">
             <h2>Här är tarmbakterien som kan förklara antibiotikaresistens.</h2>
-            <p>Tuffa bakterier ska besegras i framtiden. Nya bilder på en bakterie avslöjar tidigare okända egenskaper som kan spela avgörande roll i arbetet att bota svåra sjukdomar.</p>
+            <p>Tuffa bakterier ska besegras i framtiden. Nya bilder på en bakterie avslöjar tidigare okända egenskaper...</p>
           </div>
         </article>
       </div>
@@ -102,16 +109,7 @@
 
 
 
-    <!-- <section class="content-container">
-      <div class="foodora-ad">
-        <img class ="cropped" src="https://mb.cision.com/Public/12609/3329086/bdf3583560d404fe_800x800ar.jpg" alt="Här kommer en bild på mat">
-          <article>
-            <div class="textInImage">
-              <h6>Foodora</h6>
-            </div>
-        </article>
-      </div>
-    </section> -->
+
 
     <script src="script.js"></script>
   </body>

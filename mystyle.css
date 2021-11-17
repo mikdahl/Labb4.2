@@ -4,10 +4,12 @@ body {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* Logotype */
 h1 {
+  padding-left: 15px;
   letter-spacing: 3px;
   color: #1E2D37;
   font-size: 24px;
@@ -40,7 +42,11 @@ p {
   font-size: 13px;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 380px) {
+  #nav-expanded {
+    display: none;
+  }
+
   nav {
     position: absolute;
     width: 100%;
@@ -74,7 +80,7 @@ p {
   }
   nav .nav-item2 {
     position: relative;
-    right: 7.5%;
+    right: 12%;
   }
   nav .nav-item3 {
     right: 14%;
@@ -88,19 +94,42 @@ p {
 
   /* Search box styling */
   input[type=search] {
-    border-radius: 10px;
-    padding: 5px;
+    border-radius: none;
+    border: none;
+    background: none;
+    max-width: 120px;
+    position: relative;
+    left: 40px;
+    bottom: 18px;
+  }
+
+  .input-icons {
+    width: 100%;
+  }
+
+  .icon {
+    padding: 10px;
+    color: black;
+    min-width: 50px;
+    text-align: center;
   }
 
   .search-container {
-    padding: 20px;
-    max-height: 20px;
+    position: relative;
+    background-color: white;
+    border-radius: 15px;
+    border: #1E2D37 0.5px solid;
+    padding: 5px;
+    right: 11%;
+    max-width: 169px;
+    max-height: 29px;
+    top: 16px;
   }
   .search-container img {
     position: relative;
-    bottom: 66px;
-    left: 5px;
     width: 20px !important;
+    top: 6px;
+    left: 10px;
   }
   .search-container p {
     position: relative;
@@ -277,26 +306,38 @@ p {
 }
 /* Add responsiveness - On small screens, display the navbar vertically instead of horizontally */
 @media only screen and (max-width: 375px) {
+  body {
+    overflow-x: hidden;
+  }
+
   img {
     width: 100%;
   }
 
   .search-container {
-    float: none;
+    display: none;
   }
 
   .nav-item1 {
+    max-height: 57px;
     padding-left: 0px !important;
-    max-height: 80px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
-  .nav-item1 .hamburger {
-    width: 50px;
+
+  .hamburger {
+    width: 24px;
     position: relative;
-    left: 280px;
-    bottom: 30px;
+    left: 90%;
+    bottom: 50px;
   }
-  .nav-item1 .hamburger img {
+  .hamburger img {
     max-width: 50px;
+  }
+
+  .nav-item1-nonshadow {
+    max-height: 60px;
+    padding-left: 0px !important;
+    box-shadow: none;
   }
 
   .nav-item2 {
@@ -305,6 +346,29 @@ p {
 
   .nav-item3 {
     display: none;
+  }
+
+  #mobileNav {
+    display: none;
+  }
+
+  .nav-expanded {
+    position: relative;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+  }
+  ul li a {
+    padding-left: 20px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    display: block;
+    color: black;
+    font-size: 20px;
   }
 
   .grid-container {
@@ -316,9 +380,62 @@ p {
     position: relative;
     width: 100%;
   }
+  .grid-container .grid-item .textInArticle {
+    width: 100%;
+    position: absolute;
+    bottom: 4px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .grid-container .grid-item .textInArticle h2 {
+    margin: 0px;
+    padding-left: 15px;
+  }
+  .grid-container .grid-item .textInArticle h4 {
+    margin-bottom: 0px;
+    padding-left: 15px;
+  }
+  .grid-container .grid-item .textInArticle p {
+    display: none;
+  }
+  .grid-container .grid-item .textInArticle .rightside-readmore {
+    position: relative;
+    left: 66%;
+  }
+  .grid-container .grid-item .textInArticle .rightside-readmore h4 {
+    padding-left: 0px;
+    margin-bottom: 0px;
+  }
+  .grid-container .grid-item .textInArticle .rightside-readmore a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .grid-container .grid-item .textInArticle .rightside-readmore-small {
+    position: relative;
+    left: 66%;
+  }
+  .grid-container .grid-item .textInArticle .rightside-readmore-small h4 {
+    padding-left: 0px;
+    margin-bottom: 0px;
+  }
+  .grid-container .grid-item .textInArticle .rightside-readmore-small a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .grid-container .grid-item .textInSmallArticle {
+    height: 100%;
+    position: absolute;
+    bottom: 0px;
+    margin-left: 160px;
+    color: #1E2D37;
+  }
+  .grid-container .grid-item .textInSmallArticle h2 {
+    margin-top: 0px;
+  }
   .grid-container .article1-mobile {
     grid-column: 1;
     grid-row: 1;
+    padding-top: 10px;
   }
   .grid-container .article2-mobile {
     grid-column: 1;
@@ -327,14 +444,33 @@ p {
   .grid-container .article3-mobile {
     grid-column: 1;
     grid-row: 3;
+    max-height: 140px;
+  }
+  .grid-container .article3-mobile img {
+    width: 40%;
   }
   .grid-container .article4-mobile {
     grid-column: 1;
     grid-row: 4;
+    min-height: 140px;
+  }
+  .grid-container .article4-mobile img {
+    width: 40%;
+    height: 136px;
+  }
+  .textInImage {
+    position: relative;
+    bottom: 235px;
+  }
+  .textInImage h6 {
+    color: #ffffff;
+    font-weight: bold;
+    margin-left: 20px;
   }
 
   .content-container {
     padding-top: 10px;
+    padding: 10px;
   }
   .content-container .cropped {
     width: 100%;
