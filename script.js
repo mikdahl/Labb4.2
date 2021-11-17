@@ -1,6 +1,8 @@
 var mobileNav = document.getElementById("mobileNav");
+var nav_item1 = document.getElementsByClassName("nav-item1")[0];
+
 var result =""; //Variable for storing the result of the HTML & Array output
-//var headerNav = document.getElementById("nav-item1");
+
 var closeIcon ="closeIcon.png";
 var hamburgerIcon ="nav.png";
 
@@ -21,14 +23,19 @@ function displayLinks(){
     if(mobileNav.style.display ==="none"){
     mobileNav.style.display ="block";
     mobileNav.style.boxShadow ="0px 2px 2px rgb(0, 0, 0, 0.10)";
-        //headerNav.style.boxShadow = "none";
         var navIcon = document.getElementById("nav-icon").src = closeIcon;
-
+        
+        //Adds the class that hides the box shadow
+        nav_item1.classList.add("nav-item1-nonshadow");
+        
     } else {
         mobileNav.style.display="none";
-        //headerNav.style.boxShadow = "0px 4px 4px rgb(0, 0, 0, 0.25)";
         navIcon = document.getElementById("nav-icon").src = hamburgerIcon;
+        
+        //removes the class that hides the box shadow
+        nav_item1.classList.remove("nav-item1-nonshadow");
     }
 }
+
 
 

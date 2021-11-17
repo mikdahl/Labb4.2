@@ -377,6 +377,7 @@ p{
     .nav-item1-nonshadow{
         max-height:60px;
         padding-left: 0px !important;
+        box-shadow: none;
     }
     .nav-item2{ //nav item 2 is hidden on mobile
         display: none;
@@ -419,7 +420,14 @@ p{
         .grid-item{
             position: relative;
             width: 100%;
+            .textInArticle{
+
+            }
+            .textInSmallArticle{
+                
+            }
         }
+        
         .article1-mobile{
             grid-column: 1;
             grid-row:1;
