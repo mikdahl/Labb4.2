@@ -4,228 +4,373 @@ body {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
+/* Logotype */
 h1 {
+  padding-left: 15px;
+  letter-spacing: 3px;
   color: #1E2D37;
   font-size: 24px;
   font-weight: bold;
-  font-family: "Ceviche one";
+  font-family: "Ubuntu", sans-serif;
 }
 
+/* Article information like date and time */
 h4 {
   font-size: 10px;
 }
 
+/* Header for aticles */
 h2 {
   font-size: 16px;
 }
 
+/* Foodora text styling */
+h6 {
+  letter-spacing: 3px;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Ubuntu", sans-serif;
+  margin: 1%;
+}
+
+/* Text in artickle */
 p {
   font-size: 13px;
 }
 
-nav {
-  position: absolute;
-  width: 100%;
-  left: 0px;
-  right: 0px;
-  background: #ffffff;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-nav li {
-  display: inline-block;
-  padding: 20px;
-}
-nav a {
-  display: block;
-  padding: 6px 12px;
-  text-decoration: none;
-  color: #1E2D37;
-}
-nav .nav-item1 {
-  max-width: 240px;
-}
-nav .nav-item2 {
-  position: relative;
-  right: 160px;
-}
-
-a:hover {
-  color: blue;
-}
-
-/* Search box styling */
-input[type=search] {
-  border-radius: 10px;
-  padding: 5px;
-}
-
-.search-container {
-  padding: 20px;
-  max-height: 20px;
-}
-.search-container img {
-  position: relative;
-  bottom: 66px;
-  left: 5px;
-  width: 20px !important;
-}
-.search-container p {
-  position: relative;
-  bottom: 35px;
-  left: 30px;
-}
-.search-container .search-container:focus img {
-  display: none;
-}
-.search-container .search-container:focus p {
-  display: none;
-}
-
-/* Add responsiveness - On small screens, display the navbar vertically instead of horizontally */
-@media screen and (max-width: 600px) {
-  .topnav .search-container {
-    float: none;
+@media screen and (min-width: 380px) {
+  #nav-expanded {
+    display: none;
   }
 
-  .topnav a, .topnav input[type=text], .topnav .search-container button {
-    float: none;
-    display: block;
-    text-align: left;
+  nav {
+    position: absolute;
     width: 100%;
+    left: 0px;
+    right: 0px;
+    background: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /* Logotype */
+    /* Menu */
+    /* Search bar */
+  }
+  nav ul {
     margin: 0;
-    padding: 14px;
+    padding: 0;
+    list-style: none;
+  }
+  nav li {
+    display: inline-block;
+    padding: 20px;
+  }
+  nav a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+    color: #1E2D37;
+  }
+  nav .nav-item1 {
+    max-width: 240px;
+    padding-left: 10%;
+    position: relative;
+  }
+  nav .nav-item2 {
+    position: relative;
+    right: 12%;
+  }
+  nav .nav-item3 {
+    right: 14%;
+    position: relative;
   }
 
-  .topnav input[type=text] {
-    border: 1px solid #ccc;
+  /* Menu hover */
+  a:hover {
+    color: blue;
+  }
+
+  /* Search box styling */
+  input[type=search] {
+    border-radius: none;
+    border: none;
+    background: none;
+    max-width: 120px;
+    position: relative;
+    left: 40px;
+    bottom: 18px;
+  }
+
+  .input-icons {
+    width: 100%;
+  }
+
+  .icon {
+    padding: 10px;
+    color: black;
+    min-width: 50px;
+    text-align: center;
+  }
+
+  .search-container {
+    position: relative;
+    background-color: white;
+    border-radius: 15px;
+    border: #1E2D37 0.5px solid;
+    padding: 5px;
+    right: 11%;
+    max-width: 169px;
+    max-height: 29px;
+    top: 16px;
+  }
+  .search-container img {
+    position: relative;
+    width: 20px !important;
+    top: 6px;
+    left: 10px;
+  }
+  .search-container p {
+    position: relative;
+    bottom: 35px;
+    left: 30px;
+  }
+  .search-container .search-container:focus img {
+    display: none;
+  }
+  .search-container .search-container:focus p {
+    display: none;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+  }
+  .grid-container .grid-item {
+    position: relative;
+  }
+  .grid-container .grid-item .textInSmallArticle {
+    height: 100%;
+    position: absolute;
+    bottom: 0px;
+    margin-left: 180px;
+    color: #1E2D37;
+  }
+  .grid-container .grid-item .textInSmallArticle h2 {
+    margin-top: 0px;
+  }
+  .grid-container .grid-item .textInArticle {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .grid-container .grid-item .textInArticle h2 {
+    padding-left: 30px;
+    margin: 0px;
+  }
+  .grid-container .grid-item .textInArticle h4 {
+    padding-left: 30px;
+    margin-bottom: 2px;
+  }
+  .grid-container .grid-item .textInArticle p {
+    margin-top: 5px;
+    padding-left: 30px;
+  }
+  .grid-container .grid-item .textInArticle .rightside-readmore {
+    position: relative;
+    left: 82%;
+  }
+  .grid-container .grid-item .textInArticle .rightside-readmore h4 {
+    padding-left: 0px;
+    margin-bottom: 0px;
+  }
+  .grid-container .grid-item .textInArticle .rightside-readmore a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .grid-container .grid-item .textInArticle .rightside-readmore-small {
+    position: relative;
+    left: 70%;
+  }
+  .grid-container .grid-item .textInArticle .rightside-readmore-small h4 {
+    padding-left: 0px;
+    margin-bottom: 0px;
+  }
+  .grid-container .grid-item .textInArticle .rightside-readmore-small a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .grid-container .article1 {
+    color: #ffffff;
+    min-height: 550px;
+    min-width: 650px;
+    grid-column: 1/span 2;
+    grid-row: 1/span 4;
+  }
+  .grid-container .article1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* fit image in container */
+  }
+  .grid-container .article2 {
+    color: #ffffff;
+    min-height: 300px;
+    min-width: 400px;
+    grid-column: 3;
+    grid-row: 1/span 2;
+  }
+  .grid-container .article2 img {
+    width: 100%;
+    height: 100%;
+  }
+  .grid-container .article3 {
+    color: #ffffff;
+    min-height: 140px;
+    min-width: 180px;
+    grid-column: 3;
+    grid-row: 3;
+  }
+  .grid-container .article3 img {
+    width: 170px;
+    height: 100%;
+  }
+  .grid-container .article4 {
+    color: #ffffff;
+    min-height: 140px;
+    min-width: 180px;
+    grid-column: 3;
+    grid-row: 4;
+  }
+  .grid-container .article4 img {
+    width: 170px;
+    height: 100%;
+  }
+
+  .arrow-a:hover .readmore-arrow {
+    left: 10px;
+    position: relative;
+  }
+
+  .readmore-arrow {
+    left: 0px;
+    width: 100px;
+    transition: left 0.7s;
+  }
+
+  /* Line divider styling ???????????? Kolla med resten av gruppen!!!!*/
+  hr {
+    width: 100%;
+    position: inherit;
+  }
+
+  .content-container {
+    max-width: 1064px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 100px;
+  }
+
+  .foodora-ad {
+    width: 100%;
+    max-height: 145px;
+    background-color: black;
+  }
+
+  .textInImage {
+    position: relative;
+    bottom: 150px;
+  }
+  .textInImage h6 {
+    color: #ffffff;
+    font-weight: bold;
+    margin-left: 20px;
+  }
+
+  .cropped {
+    width: 1064px;
+    /* width of container */
+    height: 145px;
+    /* height of container */
+    object-fit: cover;
+    /* fit image in container */
+    background-color: #1E2D37;
   }
 }
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-gap: 10px;
-}
-.grid-container .grid-item {
-  position: relative;
-}
-.grid-container .grid-item .textInSmallArticle {
-  height: 100%;
-  position: absolute;
-  bottom: 0px;
-  margin-left: 180px;
-  color: #1E2D37;
-}
-.grid-container .grid-item .textInSmallArticle h2 {
-  margin-top: 0px;
-}
-.grid-container .grid-item .textInArticle {
-  width: 100%;
-  position: absolute;
-  bottom: 0px;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-.grid-container .grid-item .textInArticle h2 {
-  padding-left: 30px;
-  margin: 0px;
-}
-.grid-container .grid-item .textInArticle h4 {
-  padding-left: 30px;
-  margin-bottom: 2px;
-}
-.grid-container .grid-item .textInArticle p {
-  margin-top: 5px;
-  padding-left: 30px;
-}
-.grid-container .grid-item .textInArticle .rightside-readmore {
-  position: relative;
-  left: 82%;
-}
-.grid-container .grid-item .textInArticle .rightside-readmore h4 {
-  padding-left: 0px;
-  margin-bottom: 0px;
-}
-.grid-container .grid-item .textInArticle .rightside-readmore a {
-  color: #ffffff;
-  text-decoration: none;
-}
-.grid-container .grid-item .textInArticle .rightside-readmore-small {
-  position: relative;
-  left: 70%;
-}
-.grid-container .grid-item .textInArticle .rightside-readmore-small h4 {
-  padding-left: 0px;
-  margin-bottom: 0px;
-}
-.grid-container .grid-item .textInArticle .rightside-readmore-small a {
-  color: #ffffff;
-  text-decoration: none;
-}
-.grid-container .article1 {
-  color: #ffffff;
-  min-height: 550px;
-  min-width: 650px;
-  grid-column: 1/span 2;
-  grid-row: 1/span 4;
-}
-.grid-container .article1 img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /* fit image in container */
-}
-.grid-container .article2 {
-  color: #ffffff;
-  min-height: 300px;
-  min-width: 400px;
-  grid-column: 3;
-  grid-row: 1/span 2;
-}
-.grid-container .article2 img {
-  width: 100%;
-  height: 100%;
-}
-.grid-container .article3 {
-  color: #ffffff;
-  min-height: 140px;
-  min-width: 180px;
-  grid-column: 3;
-  grid-row: 3;
-}
-.grid-container .article3 img {
-  width: 170px;
-  height: 100%;
-}
-.grid-container .article4 {
-  color: #ffffff;
-  min-height: 140px;
-  min-width: 180px;
-  grid-column: 3;
-  grid-row: 4;
-}
-.grid-container .article4 img {
-  width: 170px;
-  height: 100%;
-}
+/* Add responsiveness - On small screens, display the navbar vertically instead of horizontally */
+@media only screen and (max-width: 375px) {
+  body {
+    overflow-x: hidden;
+  }
 
-.arrow-a:hover .readmore-arrow {
-  left: 10px;
-  position: relative;
-}
+  img {
+    width: 100%;
+  }
 
-.readmore-arrow {
-  left: 0px;
-  width: 100px;
-  transition: left 0.7s;
-}
+  .search-container {
+    display: none;
+  }
 
-@media only screen and (max-width: 600px) {
+  .nav-item1 {
+    max-height: 57px;
+    padding-left: 0px !important;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .hamburger {
+    width: 24px;
+    position: relative;
+    left: 90%;
+    bottom: 50px;
+  }
+  .hamburger img {
+    max-width: 50px;
+  }
+
+  .nav-item1-nonshadow {
+    max-height: 60px;
+    padding-left: 0px !important;
+    box-shadow: none;
+  }
+
+  .nav-item2 {
+    display: none;
+  }
+
+  .nav-item3 {
+    display: none;
+  }
+
+  #mobileNav {
+    display: none;
+  }
+
+  .nav-expanded {
+    position: relative;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+  }
+  ul li a {
+    padding-left: 20px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    display: block;
+    color: black;
+    font-size: 20px;
+  }
+
   .grid-container {
     display: grid;
     grid-template-columns: auto;
@@ -233,10 +378,64 @@ input[type=search] {
   }
   .grid-container .grid-item {
     position: relative;
+    width: 100%;
+  }
+  .grid-container .grid-item .textInArticle {
+    width: 100%;
+    position: absolute;
+    bottom: 4px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .grid-container .grid-item .textInArticle h2 {
+    margin: 0px;
+    padding-left: 15px;
+  }
+  .grid-container .grid-item .textInArticle h4 {
+    margin-bottom: 0px;
+    padding-left: 15px;
+  }
+  .grid-container .grid-item .textInArticle p {
+    display: none;
+  }
+  .grid-container .grid-item .textInArticle .rightside-readmore {
+    position: relative;
+    left: 66%;
+  }
+  .grid-container .grid-item .textInArticle .rightside-readmore h4 {
+    padding-left: 0px;
+    margin-bottom: 0px;
+  }
+  .grid-container .grid-item .textInArticle .rightside-readmore a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .grid-container .grid-item .textInArticle .rightside-readmore-small {
+    position: relative;
+    left: 66%;
+  }
+  .grid-container .grid-item .textInArticle .rightside-readmore-small h4 {
+    padding-left: 0px;
+    margin-bottom: 0px;
+  }
+  .grid-container .grid-item .textInArticle .rightside-readmore-small a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .grid-container .grid-item .textInSmallArticle {
+    height: 100%;
+    position: absolute;
+    bottom: 0px;
+    margin-left: 160px;
+    color: #1E2D37;
+  }
+  .grid-container .grid-item .textInSmallArticle h2 {
+    margin-top: 0px;
   }
   .grid-container .article1-mobile {
     grid-column: 1;
     grid-row: 1;
+    padding-top: 10px;
   }
   .grid-container .article2-mobile {
     grid-column: 1;
@@ -245,41 +444,37 @@ input[type=search] {
   .grid-container .article3-mobile {
     grid-column: 1;
     grid-row: 3;
+    max-height: 140px;
+  }
+  .grid-container .article3-mobile img {
+    width: 40%;
   }
   .grid-container .article4-mobile {
     grid-column: 1;
     grid-row: 4;
+    min-height: 140px;
   }
-}
-.content-container {
-  max-width: 1064px;
-  margin-left: auto;
-  margin-right: auto;
-}
+  .grid-container .article4-mobile img {
+    width: 40%;
+    height: 136px;
+  }
+  .textInImage {
+    position: relative;
+    bottom: 235px;
+  }
+  .textInImage h6 {
+    color: #ffffff;
+    font-weight: bold;
+    margin-left: 20px;
+  }
 
-.foodora-ad {
-  width: 100%;
-  height: 100%;
-}
-
-.textInImage {
-  position: relative;
-  bottom: 150px;
-}
-.textInImage h1 {
-  color: #ffffff;
-  font-weight: bold;
-  margin-left: 20px;
-}
-
-.cropped {
-  width: 1064px;
-  /* width of container */
-  height: 140px;
-  /* height of container */
-  object-fit: cover;
-  /* fit image in container */
-  background-color: #1E2D37;
+  .content-container {
+    padding-top: 10px;
+    padding: 10px;
+  }
+  .content-container .cropped {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=mystyle.css.map */

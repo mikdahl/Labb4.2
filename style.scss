@@ -12,271 +12,482 @@ $color-blueblack: #1E2D37;
 $article-overlay: rgb(0,0,0, 0.7);
 $font-lora: 'Lora', serif;
 $font-oxygen: 'Oxygen', sans-serif;
-
+$font-ubuntu: 'Ubuntu', sans-serif;
 body{
     margin:0px;
 }
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
-
+/* Logotype */
 h1{
+    padding-left:15px;
+    letter-spacing: 3px;
     color:$color-blueblack;
     font-size: $logotype;
     font-weight:$weight-bold;
-    font-family: "Ceviche one";
+    font-family: $font-ubuntu;
     }
+/* Article information like date and time */
 h4{
     font-size: $article-info;
 }
+/* Header for aticles */
 h2{
     font-size:$article-header;
 }
+/* Foodora text styling */
+h6{
+    letter-spacing: 3px;
+    color:$color-white;
+    font-size: $logotype;
+    font-weight:$weight-bold;
+    font-family: $font-ubuntu;
+    margin: 1%;
+}
+/* Text in artickle */
 p{
     font-size:$article-body;
 }
 
 
+@media screen and (min-width: 380px){
 
-    nav {
-    position: absolute;
-    width: 100%;
-    left: 0px;
-    right: 0px;
-    background: $color-white;
-    box-shadow: 0px 4px 4px rgb(0, 0, 0, 0.25);
-
-        ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        }
-
-        li {
-        display: inline-block;
-        padding:20px;
-        }
-
-        a {
-        display: block;
-        padding: 6px 12px;
-        text-decoration: none;
-        color: $color-blueblack
-        }
-        .nav-item1{
-            max-width: 240px;
-        }
-        .nav-item2{
-            position:relative;
-            right:160px;
-        }
-      }
-
-      a:hover{
-        color: blue;
-        }
-
-
-
-
-
-    //Code from Mikael
-
-/* Search box styling */
-input[type=search]{
-    border-radius: 10px;
-    padding: 5px;
-}
-
-.search-container{
-    padding:20px;
-    max-height:20px;
-    img{
-       position: relative;
-       bottom:66px;
-       left:5px;
-       width: 20px !important;
+    #nav-expanded{
+        display: none;
     }
-    p{
+
+        nav {
+        position: absolute;
+        width: 100%;
+        left: 0px;
+        right: 0px;
+        background: $color-white;
+        box-shadow: 0px 4px 4px rgb(0, 0, 0, 0.25);
+
+            ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            }
+
+            li {
+            display: inline-block;
+            padding:20px;
+            }
+
+            a {
+            display: block;
+            padding: 6px 12px;
+            text-decoration: none;
+            color: $color-blueblack
+            }
+            /* Logotype */
+            .nav-item1{
+                max-width: 240px;
+                padding-left:10%;
+                position:relative;
+            }
+            /* Menu */
+            .nav-item2{
+                position:relative;
+                right: 12%;
+            }
+            /* Search bar */
+            .nav-item3{
+                right:14%;
+                position:relative;
+            }
+        }
+        /* Menu hover */
+        a:hover{
+            color: blue;
+        }
+
+
+
+
+    /* Search box styling */
+    input[type=search]{
+        border-radius: none;
+        border: none;
+        background: none;
+        max-width: 120px;
         position: relative;
-        bottom:35px;
-        left:30px;
+        left:40px;
+        bottom:18px;
     }
-    .search-container:focus{
+
+    .input-icons{
+        width: 100%;
+
+    }
+    .icon{
+        padding:10px;
+        color: black;
+        min-width: 50px;
+        text-align: center;
+    }
+
+    .search-container{
+        position: relative;
+        background-color: white;
+        border-radius: 15px;
+        border: #1E2D37 0.5px solid;
+        padding:5px;
+        right:11%;
+        max-width:169px;
+        max-height:29px;
+        top:16px;
+        //max-height:20px;
         img{
-            display: none;
+        position: relative;
+        width: 20px !important;
+        top:6px;
+        left:10px;
         }
         p{
-            display: none;
+            position: relative;
+            bottom:35px;
+            left:30px;
         }
-    }
-
-}
-  /* Add responsiveness - On small screens, display the navbar vertically instead of horizontally */
-  @media screen and (max-width: 600px) {
-    .topnav .search-container {
-      float: none;
-    }
-    .topnav a, .topnav input[type=text], .topnav .search-container button {
-     float: none;
-     display: block;
-     text-align: left;
-     width: 100%;
-     margin: 0;
-     padding: 14px;
-   }
-   .topnav input[type=text] {
-    border: 1px solid #ccc;
-  }
-  }
-
-
-
-//=======================================================================
-// CSS properties for the Grid container, grid item and single Item
-.grid-container{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-gap: 10px;
-
-    .grid-item{
-        position: relative;
-
-        //CSS class & properties for text inside the article to handle positioning
-        .textInSmallArticle{
-            height: 100%;
-            position: absolute;
-            bottom: 0px;
-            margin-left: 180px;
-            color: $color-blueblack;
-            h2{
-                margin-top: 0px;
-            }
-        }
-
-        .textInArticle{
-            width: 100%;
-            position: absolute;
-            bottom: 0px;
-            background-color: $article-overlay;
-
-            h2{
-                padding-left:30px;
-                margin:0px;
-            }
-            h4{
-                padding-left:30px;
-                margin-bottom: 2px;
+        .search-container:focus{
+            img{
+                display: none;
             }
             p{
-                margin-top: 5px;
-                padding-left:30px;
+                display: none;
+            }
+        }
+    }
+
+        .hamburger{
+            display: none;
+        }
+
+
+
+
+    //=======================================================================
+    // CSS properties for the Grid container, grid item and single Item
+    .grid-container{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 10px;
+
+        .grid-item{
+            position: relative;
+
+            //CSS class & properties for text inside the article to handle positioning
+            .textInSmallArticle{
+                height: 100%;
+                position: absolute;
+                bottom: 0px;
+                margin-left: 180px;
+                color: $color-blueblack;
+                h2{
+                    margin-top: 0px;
+                }
             }
 
-            .rightside-readmore{
-                position: relative;
-                left:82%;
+            .textInArticle{
+                width: 100%;
+                position: absolute;
+                bottom: 0px;
+                background-color: $article-overlay;
+
+                h2{
+                    padding-left:30px;
+                    margin:0px;
+                }
                 h4{
-                    padding-left: 0px;
-                    margin-bottom: 0px;
+                    padding-left:30px;
+                    margin-bottom: 2px;
                 }
-                a{
-                    color: $color-white;
-                    text-decoration: none;
+                p{
+                    margin-top: 5px;
+                    padding-left:30px;
                 }
 
+                .rightside-readmore{
+                    position: relative;
+                    left:82%;
+                    h4{
+                        padding-left: 0px;
+                        margin-bottom: 0px;
+                    }
+                    a{
+                        color: $color-white;
+                        text-decoration: none;
+                    }
+
+                }
+                .rightside-readmore-small{
+                    position:relative;
+                    left:70%;
+                    h4{
+                        padding-left:0px;
+                        margin-bottom: 0px;
+                    }
+                    a{
+                        color: $color-white;
+                        text-decoration: none;
+                    }
+                }
             }
-            .rightside-readmore-small{
-                position:relative;
-                left:70%;
-                h4{
-                    padding-left:0px;
-                    margin-bottom: 0px;
-                }
-                a{
-                    color: $color-white;
-                    text-decoration: none;
-                }
+        }
+
+        .article1{
+            color: $color-white;
+            min-height: 550px;
+            min-width: 650px;
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 4;
+            img{
+                width:100%;
+                height:100%;
+                object-fit: cover; /* fit image in container */
+            }
+
+        }
+        .article2{
+            color: $color-white;
+            min-height: 300px;
+            min-width:400px;
+            grid-column: 3;
+            grid-row: 1 / span 2;
+            img{
+                width:100%;
+                height:100%;
+            }
+        }
+        .article3{
+            color: $color-white;
+            min-height:140px;
+            min-width:180px;
+            grid-column:3;
+            grid-row: 3;
+            img{
+                width:170px;
+                height:100%;
+            }
+        }
+        .article4{
+            color: $color-white;
+            min-height:140px;
+            min-width:180px;
+            grid-column:3;
+            grid-row: 4;
+            img{
+                width:170px;
+                height:100%;
             }
         }
     }
 
-    .article1{
-        color: $color-white;
-        min-height: 550px;
-        min-width: 650px;
-        grid-column: 1 / span 2;
-        grid-row: 1 / span 4;
-        img{
-            width:100%;
-            height:100%;
-            object-fit: cover; /* fit image in container */
+
+
+    //=======================================================================================
+    //CSS propertie for animating the arrow when hoovered.
+    .arrow-a:hover{
+        .readmore-arrow{
+            left:10px;
+            position: relative;
         }
+    }
+    .readmore-arrow{
+        left:0px;
+        width:100px;
+        transition: left .7s;
+    }
+
+ /* Line divider styling ???????????? Kolla med resten av gruppen!!!!*/
+ hr {
+  width: 100%;
+  position:inherit;
+ }
+
+    //======================================================================
+    //CSS class & properties for the content container
+
+    .content-container{
+    max-width: 1064px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top:100px;
+    }
+
+    .foodora-ad{
+        width: 100%;
+        max-height:145px;
+        background-color: black;
+    }
+
+    //Text in image, foodora
+    .textInImage {
+        position: relative;
+        bottom: 150px;
+
+        h6 {
+            color: $color-white;
+            font-weight: $weight-bold;
+            margin-left: 20px;
+        }
+    }
+
+    //Cropped image
+    .cropped {
+    width: 1064px; /* width of container */
+    height: 145px; /* height of container */
+    object-fit: cover; /* fit image in container */
+    background-color: $color-blueblack;
 
     }
-    .article2{
-        color: $color-white;
-        min-height: 300px;
-        min-width:400px;
-        grid-column: 3;
-        grid-row: 1 / span 2;
-        img{
-            width:100%;
-            height:100%;
-        }
-    }
-    .article3{
-        color: $color-white;
-        min-height:140px;
-        min-width:180px;
-        grid-column:3;
-        grid-row: 3;
-        img{
-            width:170px;
-            height:100%;
-        }
-    }
-    .article4{
-        color: $color-white;
-        min-height:140px;
-        min-width:180px;
-        grid-column:3;
-        grid-row: 4;
-        img{
-            width:170px;
-            height:100%;
-        }
-    }
+
 }
 
-//=======================================================================================
-//CSS propertie for animating the arrow when hoovered.
-.arrow-a:hover{
-    .readmore-arrow{
-        left:10px;
+
+
+ /* Add responsiveness - On small screens, display the navbar vertically instead of horizontally */
+@media only screen and (max-width: 375px){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    img{
+        width: 100%;
+    }
+
+    .search-container {
+      display: none;
+    }
+    .nav-item1{ //Nav item1 on mobile. 
+        max-height:57px;
+        padding-left: 0px !important;
+        box-shadow: 0px 4px 4px rgb(0, 0, 0, 0.25);
+    }
+
+    .hamburger{ // CSS-class for the hamburger menu
+        width: 24px;
+        position: relative;
+        left:90%;
+        bottom: 50px;
+        img{ // Setting the max witdh for the hamrburger image
+            max-width: 50px;
+        }
+    }
+
+    .nav-item1-nonshadow{
+        max-height:60px;
+        padding-left: 0px !important;
+        box-shadow: none;
+    }
+    .nav-item2{ //nav item 2 is hidden on mobile
+        display: none;
+
+    }
+    .nav-item3{ // Nav item 3 is hidden on mobile
+        display: none;
+    }
+
+    #mobileNav{
+        display: none;
+        
+    }
+    .nav-expanded{
         position: relative;
     }
-}
-.readmore-arrow{
-    left:0px;
-    width:100px;
-    transition: left .7s;
-}
 
+    ul{//Styling comes here
+        list-style-type: none;
+        margin:0px;
+        padding:0px;
+        overflow: hidden;
+        li{ // Styling comes here
+            
+        }
+        li a{
+            padding-left:20px;
+            padding-bottom: 5px;
+            text-decoration: none;
+            display: block;
+            color: black;
+            font-size: 20px;
+        }
+    }
 
-
-@media only screen and (max-width: 600px){
     .grid-container{
         display: grid;
         grid-template-columns: auto;
         width: 100%;
         .grid-item{
             position: relative;
+            width: 100%;
+            .textInArticle{
+                width: 100%;
+                position: absolute;
+                bottom: 4px;
+                color: $color-white;
+                background-color: $article-overlay;
+                h2{
+                    margin: 0px;
+                    padding-left:15px;
+                }
+                h4{
+                    margin-bottom: 0px;
+                    padding-left:15px;
+                }
+                p{
+                    display: none;
+                }
+
+                .rightside-readmore{
+                    position: relative;
+                    left:66%;
+                    h4{
+                        padding-left: 0px;
+                        margin-bottom: 0px;
+                    }
+                    a{
+                        color: $color-white;
+                        text-decoration: none;
+                    }
+
+                }
+                .rightside-readmore-small{
+                    position:relative;
+                    left:66%;
+                    h4{
+                        padding-left:0px;
+                        margin-bottom: 0px;
+                    }
+                    a{
+                        color: $color-white;
+                        text-decoration: none;
+                    }
+                }
+
+            }
+            .textInSmallArticle{
+                height: 100%;
+                position: absolute;
+                bottom: 0px;
+                margin-left: 160px;
+                color: $color-blueblack;
+                h2{
+                    margin-top: 0px;
+                }
+            }
         }
+        
         .article1-mobile{
             grid-column: 1;
             grid-row:1;
+            padding-top:10px;
 
+           
         }
         .article2-mobile{
             grid-column: 1;
@@ -285,44 +496,44 @@ input[type=search]{
         .article3-mobile{
             grid-column: 1;
             grid-row:3;
+            max-height:140px;
+            img{
+                width:40%;
+            }
+            p{
+                
+            }
         }
         .article4-mobile{
             grid-column: 1;
             grid-row:4;
+            min-height:140px;
+            img{
+                width:40%;
+                height:136px;
+            }
+            p{
+                
+            }
         }
     }
-}
 
-//======================================================================
-//CSS class & properties for the content container
+    //Text in image, foodora
+    .textInImage {
+        position: relative;
+        bottom: 235px;
 
-.content-container{
-max-width: 1064px;
-margin-left: auto;
-margin-right: auto;
-}
-
-.foodora-ad{
-    width: 100%;
-    height:100%;
-}
-
-//Text in image, foodora
-.textInImage {
-    position: relative;
-    bottom: 150px;
-
-    h1 {
-        color: $color-white;
-        font-weight: $weight-bold;
-        margin-left: 20px;
+        h6 {
+            color: $color-white;
+            font-weight: $weight-bold;
+            margin-left: 20px;
+        }
     }
-}
-
-//Cropped image
-.cropped {
-width: 1064px; /* width of container */
-height: 140px; /* height of container */
-object-fit: cover; /* fit image in container */
-background-color: $color-blueblack;
+    .content-container{
+        padding-top: 10px;
+        padding:10px;
+        .cropped{
+            width:100%;
+        }
+    }
 }
