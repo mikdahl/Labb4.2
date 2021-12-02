@@ -29,14 +29,26 @@ h1{
     font-weight:$weight-bold;
     font-family: $font-ubuntu;
     }
-/* Article information like date and time */
-h4{
-    font-size: $article-info;
-}
 /* Header for aticles */
 h2{
     font-size:$article-header;
+    font-family: $font-ubuntu;
+
 }
+/* Article information like date and time */
+h3{
+    font-family: $font-ubuntu;
+    font-family: $font-ubuntu;
+}
+h4{
+    font-size: $article-info;
+    font-family: $font-ubuntu;
+}
+/*h5 that is not used, only styled to make it more in line */
+h5{
+    font-family: $font-ubuntu;
+}
+
 /* Foodora text styling */
 h6{
     letter-spacing: 3px;
@@ -49,6 +61,7 @@ h6{
 /* Text in artickle */
 p{
     font-size:$article-body;
+    font-family: $font-ubuntu;
 }
 
 
@@ -79,9 +92,12 @@ p{
 
             a {
             display: block;
-            padding: 6px 12px;
+            //padding: 6px 12px; //Old padding that didnt take the p tag into account.
             text-decoration: none;
-            color: $color-blueblack
+            color: $color-blueblack;
+                p{
+
+                }
             }
             /* Logotype */
             .nav-item1{
@@ -92,7 +108,7 @@ p{
             /* Menu */
             .nav-item2{
                 position:relative;
-                right: 12%;
+                right: 18%;
             }
             /* Search bar */
             .nav-item3{
@@ -136,7 +152,6 @@ p{
         border-radius: 15px;
         border: #1E2D37 0.5px solid;
         padding:5px;
-        right:11%;
         max-width:169px;
         max-height:29px;
         top:16px;
@@ -360,6 +375,19 @@ p{
         width: 100%;
     }
 
+
+    //Foodora ad in mobile
+    .foodora-ad{
+        width: 100%;
+        max-height:71px;
+        background-color: black;
+
+        img{
+            height:71px;
+            object-fit: cover;
+        }
+    }
+
     .search-container {
       display: none;
     }
@@ -431,6 +459,7 @@ p{
                 bottom: 4px;
                 color: $color-white;
                 background-color: $article-overlay;
+                height:77px;
                 h2{
                     margin: 0px;
                     padding-left:15px;
@@ -445,9 +474,13 @@ p{
 
                 .rightside-readmore{
                     position: relative;
-                    left:66%;
+                    left:74%;
+                    bottom:15px;
+                    img{
+                        height:20px;
+                    }
                     h4{
-                        padding-left: 0px;
+                        padding-left: 12px;
                         margin-bottom: 0px;
                     }
                     a{
@@ -458,9 +491,13 @@ p{
                 }
                 .rightside-readmore-small{
                     position:relative;
-                    left:66%;
+                    left:74%;
+                    bottom:15px;
+                    img{
+                        height:20px;
+                    }
                     h4{
-                        padding-left:0px;
+                        padding-left:12px;
                         margin-bottom: 0px;
                     }
                     a{
@@ -492,6 +529,10 @@ p{
         .article2-mobile{
             grid-column: 1;
             grid-row:2;
+            //height:179px;
+            img{
+                height:179px;
+            }
         }
         .article3-mobile{
             grid-column: 1;
@@ -521,12 +562,13 @@ p{
     //Text in image, foodora
     .textInImage {
         position: relative;
-        bottom: 235px;
+        bottom: 70px;
 
         h6 {
             color: $color-white;
             font-weight: $weight-bold;
-            margin-left: 20px;
+            margin-left: 10px;
+            font-size: 18px;
         }
     }
     .content-container{

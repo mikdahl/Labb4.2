@@ -17,14 +17,26 @@ h1 {
   font-family: "Ubuntu", sans-serif;
 }
 
-/* Article information like date and time */
-h4 {
-  font-size: 10px;
-}
-
 /* Header for aticles */
 h2 {
   font-size: 16px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* Article information like date and time */
+h3 {
+  font-family: "Ubuntu", sans-serif;
+  font-family: "Ubuntu", sans-serif;
+}
+
+h4 {
+  font-size: 10px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+/*h5 that is not used, only styled to make it more in line */
+h5 {
+  font-family: "Ubuntu", sans-serif;
 }
 
 /* Foodora text styling */
@@ -40,6 +52,7 @@ h6 {
 /* Text in artickle */
 p {
   font-size: 13px;
+  font-family: "Ubuntu", sans-serif;
 }
 
 @media screen and (min-width: 380px) {
@@ -69,7 +82,6 @@ p {
   }
   nav a {
     display: block;
-    padding: 6px 12px;
     text-decoration: none;
     color: #1E2D37;
   }
@@ -80,7 +92,7 @@ p {
   }
   nav .nav-item2 {
     position: relative;
-    right: 12%;
+    right: 18%;
   }
   nav .nav-item3 {
     right: 14%;
@@ -120,7 +132,6 @@ p {
     border-radius: 15px;
     border: #1E2D37 0.5px solid;
     padding: 5px;
-    right: 11%;
     max-width: 169px;
     max-height: 29px;
     top: 16px;
@@ -314,6 +325,16 @@ p {
     width: 100%;
   }
 
+  .foodora-ad {
+    width: 100%;
+    max-height: 71px;
+    background-color: black;
+  }
+  .foodora-ad img {
+    height: 71px;
+    object-fit: cover;
+  }
+
   .search-container {
     display: none;
   }
@@ -386,6 +407,7 @@ p {
     bottom: 4px;
     color: #ffffff;
     background-color: rgba(0, 0, 0, 0.7);
+    height: 77px;
   }
   .grid-container .grid-item .textInArticle h2 {
     margin: 0px;
@@ -400,10 +422,14 @@ p {
   }
   .grid-container .grid-item .textInArticle .rightside-readmore {
     position: relative;
-    left: 66%;
+    left: 74%;
+    bottom: 15px;
+  }
+  .grid-container .grid-item .textInArticle .rightside-readmore img {
+    height: 20px;
   }
   .grid-container .grid-item .textInArticle .rightside-readmore h4 {
-    padding-left: 0px;
+    padding-left: 12px;
     margin-bottom: 0px;
   }
   .grid-container .grid-item .textInArticle .rightside-readmore a {
@@ -412,10 +438,14 @@ p {
   }
   .grid-container .grid-item .textInArticle .rightside-readmore-small {
     position: relative;
-    left: 66%;
+    left: 74%;
+    bottom: 15px;
+  }
+  .grid-container .grid-item .textInArticle .rightside-readmore-small img {
+    height: 20px;
   }
   .grid-container .grid-item .textInArticle .rightside-readmore-small h4 {
-    padding-left: 0px;
+    padding-left: 12px;
     margin-bottom: 0px;
   }
   .grid-container .grid-item .textInArticle .rightside-readmore-small a {
@@ -441,6 +471,9 @@ p {
     grid-column: 1;
     grid-row: 2;
   }
+  .grid-container .article2-mobile img {
+    height: 179px;
+  }
   .grid-container .article3-mobile {
     grid-column: 1;
     grid-row: 3;
@@ -460,12 +493,13 @@ p {
   }
   .textInImage {
     position: relative;
-    bottom: 235px;
+    bottom: 70px;
   }
   .textInImage h6 {
     color: #ffffff;
     font-weight: bold;
-    margin-left: 20px;
+    margin-left: 10px;
+    font-size: 18px;
   }
 
   .content-container {
